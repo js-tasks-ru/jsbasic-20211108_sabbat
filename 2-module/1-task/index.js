@@ -11,7 +11,7 @@ function sumSalary(salaries) {
   
   let sum = 0;
   for (let salary of allSalaries){
-      if (salary !== "" && salary !== null && isFinite(salary)) {
+      if (isFinite(salary)) {
           sum += salary;
       }
   }
@@ -27,5 +27,3 @@ let salaries = {
   isPayed: false
 }
 
-
-alert( sumSalary(salaries) );
