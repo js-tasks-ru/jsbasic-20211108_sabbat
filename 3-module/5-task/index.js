@@ -1,5 +1,5 @@
-function getMinMax(str) {
-  return str
+function getMinMax(minMax) {
+  return minMax
     .split(' ')
     .map(item => isFinite(item) == true ? item  : ' ')
     .join('')
