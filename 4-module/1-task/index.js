@@ -1,10 +1,15 @@
 function makeFriendsList(friends) {
+  
   let fullName = friends.map(person => person.firstName + ' ' + person.lastName);
   let spisok = document.createElement("ul");
-  spisok.replaceChildren(...fullName.map(item => {elem = document.createElement("li"); elem.innerHTML = item; return elem}));
-  return spisok;
+  console.log(fullName);
 
+  for (let i = 0; i < friends.length; i++)
+  spisok.insertAdjacentHTML("beforeend", `
+                                           <li>
+                                           ${fullName[i]}
+                                            </li>`);
+  console.log(spisok);
+ 
+return spisok;
 }
-
-
-
